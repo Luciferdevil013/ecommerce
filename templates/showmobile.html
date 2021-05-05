@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+
+   <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5 co-sm-l2">
+                    <div class="about_img">
+                        <a href="{{url_for('static',filename='images/'+data.img)}}"><figure><img src="{{url_for('static',filename='images/'+data.img)}}" alt="img"  height="50%" width="50%" /></figure></a>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-md-7 co-sm-l2">
+                    <div class="about_box">
+                        <h3>Product</h3>
+                        <span>{{data.name}}</span>
+                        <span>Price: {{data.price}}</span>
+                        <p>{{data.details}}</p>
+
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

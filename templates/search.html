@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <section class="slider_section">
+        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+                <div class="brand-bg">
+            <div class="container">
+                <div class="row">
+                    {% for mobile in q %}
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
+                        
+                        <div class="brand_box">
+                            <img src="{{url_for('static',filename='images/'+mobile.img)}}" alt="img" />
+                            <h3>$<strong class="red">{{mobile.price}}</strong></h3>
+                            <span>{{mobile.name}}</span>
+                            <i><img src="{{url_for('static',filename='images/star.png')}}"/></i>
+                            <i><img src="{{url_for('static',filename='images/star.png')}}"/></i>
+                            <i><img src="{{url_for('static',filename='images/star.png')}}"/></i>
+                            <i><img src="{{url_for('static',filename='images/star.png')}}"/></i>
+                            <a class="read-more" href="/shop/{{mobile.slug}}">Buy Now</a>
+                            
+                        </div>
+                        
+                    </div>
+                    {% endfor %} 
+                </div>
+            </div>
+    </div>
+    <!-- end clients -->
+{% endblock %}
